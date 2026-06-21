@@ -1,0 +1,34 @@
+name: py3
+channels:
+  - pytorch
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.13
+  - pip
+  # bioinformatics
+  - pysam
+  # pytorch (CPU)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  # scientific / data
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - cython
+  - tqdm
+  - xlrd
+  # web / misc
+  - requests
+  - aiohttp
+  - scapy
+  - snakeviz
+  - opencv
+  # notebook
+  - notebook
+  - nb_conda_kernels

@@ -1,0 +1,47 @@
+# This repo holds CODE ONLY. Never commit raw or patient-identifiable data.
+# The data is shared separately (de-identified bundle); drop it into the slots below.
+
+# ---- raw / patient data: ALWAYS ignored ----
+*.vcf
+*.vcf.gz
+*.fastq
+*.fq
+*.bam
+*.sam
+*.cram
+*.tbi
+*.RCC
+*.sqlite
+
+# ---- INPUT-DATA SLOTS: keep the folder + PLACEHOLDER.md, ignore the data ----
+cohort_matched/*
+!cohort_matched/PLACEHOLDER.md
+GSE244631/*
+!GSE244631/PLACEHOLDER.md
+genefilelists/*
+!genefilelists/PLACEHOLDER.md
+snv_rebuild/*
+!snv_rebuild/PLACEHOLDER.md
+
+# ---- other data dirs: fully ignored (never committed) ----
+cohort_samples/
+processed*/
+KOLKATA/
+ClinVar/
+COSMIC/
+Genecode/
+metadata*.csv
+
+# ---- python ----
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---- os / editor ----
+.DS_Store
+Thumbs.db
+*~
+.vscode/
