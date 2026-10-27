@@ -69,7 +69,8 @@ the current folder. Each runs in seconds; `table2_exact.py` takes under a minute
 | Fig. 3b *p* and *q*; variant-burden test (*p* = 0.030); gene-level correlation | `python exact_tests_aaea.py` | printed |
 | Table 4a, DNA-variant column | `python build_paper_results.py` | `paper_results/tableIV_candidates.csv` |
 | Fig. 8 (grade-association score) | `python viz_gradescore.py` | `fig_gradescore.png` |
-| No variant or gene survives FDR correction | `python disproportion.py`, `python disproportion_genes.py` (add `--no-indian` for AA+EA) | printed |
+| No gene survives FDR correction (floor *q* ≈ 0.08) | `python build_paper_results.py` | `paper_results/tableIVD_gene_mapping.csv` (lowest *q* 0.081) |
+| Per-variant and per-gene grade tests at other carrier thresholds | `python disproportion.py`, `python disproportion_genes.py` (add `--no-indian` for AA+EA) | printed |
 
 Expected Table 2b output (`table2_exact.py`):
 
