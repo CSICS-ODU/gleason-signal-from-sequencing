@@ -45,3 +45,11 @@ venv/
 Thumbs.db
 *~
 .vscode/
+
+# ---- outputs written by the analysis scripts ----
+paper_results/
+fig_*.png
+knn_results.csv
+knn_summary.csv
+knn_paper_summary.csv
+biomarker_subset_OLD.csv
