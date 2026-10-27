@@ -1,34 +1,13 @@
+# Environment for the analysis scripts (python + numpy, pandas, scipy, matplotlib).
+# The manuscript results were produced under Python 3.13 and re-verified under
+# Python 3.14 with numpy 2.3.5, pandas 2.3.3, scipy 1.16.3 and matplotlib 3.10.7.
+# pysam is needed only for the optional raw-data rebuild in UPSTREAM.md.
 name: py3
 channels:
-  - pytorch
   - conda-forge
-  - bioconda
 dependencies:
   - python=3.13
-  - pip
-  # bioinformatics
-  - pysam
-  # pytorch (CPU)
-  - pytorch
-  - torchvision
-  - torchaudio
-  - cpuonly
-  # scientific / data
-  - numpy
-  - pandas
-  - scipy
-  - scikit-learn
-  - matplotlib
-  - seaborn
-  - cython
-  - tqdm
-  - xlrd
-  # web / misc
-  - requests
-  - aiohttp
-  - scapy
-  - snakeviz
-  - opencv
-  # notebook
-  - notebook
-  - nb_conda_kernels
+  - numpy>=2.0
+  - pandas>=2.2
+  - scipy>=1.13
+  - matplotlib>=3.9

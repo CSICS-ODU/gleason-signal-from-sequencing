@@ -9,10 +9,7 @@ CSVs (the SNV-derived population-aware analysis; NOT the rejected GEO-classifica
                               annotation buckets, log scale -> the targeted-panel (IN)
                               vs broad-sequencing (AA/EA) orders-of-magnitude difference.
 
-Run (matplotlib lives in the WSL py3 env):
-  wsl -d Ubuntu -- bash -lc "cd /mnt/c/Users/s1banerj/Develop/vcf && \
-      ~/miniconda3/bin/conda run -n py3 python build_paper_figures.py"
-Outputs PNGs into manuscript/.
+Superseded by make_paper_figures.py, which draws the published Fig. 2 and Fig. 3a.
 """
 
 import csv

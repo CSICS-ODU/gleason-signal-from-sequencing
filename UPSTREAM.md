@@ -8,8 +8,8 @@ databases, and some reference patient identifiers. They are retained in the auth
 working environment and can be shared on request, subject to the data constraints
 below.
 
-> **Genome build:** GRCh38. All variant coordinates and annotation databases must use
-> the same build.
+> **Genome build:** GRCh37 (hg19). All variant coordinates and annotation databases must
+> use the same build.
 
 ---
 
@@ -18,11 +18,11 @@ below.
 | Data | Source / where to download | Notes |
 |------|----------------------------|-------|
 | **GSE244631 reference** (NanoString BC360 expression) | NCBI GEO, accession **GSE244631** — `https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244631` (download the supplementary `.RCC` files) | 51 labeled prostate samples used here (19 high / 32 low). Place in `GSE244631/`. |
-| **Cohort: African American + European American** (5 + 5) | Moffitt Cancer Center — tumor-only DRAGEN whole-/broad sequencing, `*.hard-filtered.vcf.gz` (GRCh38) | Not public. Institutional data-use agreement; de-identified. |
+| **Cohort: African American + European American** (5 + 5) | Moffitt Cancer Center — tumor-only whole-genome sequencing called with DRAGEN 4.4.4, `*.hard-filtered.vcf.gz` (GRCh37) | Not public. Institutional data-use agreement; de-identified. |
 | **Cohort: Indian** (10) | Thakurpukur Cancer Center / Saroj Gupta Cancer Centre & Research Institute — CHPV2 targeted clinical panel, per-sample `*-full.tsv` | Not public. **Source files carry patient names; de-identify before any use.** |
-| **ClinVar** (annotation) | `https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz` | Used for benign / pathogenic / VUS classification. |
-| **COSMIC** (annotation) | `https://cancer.sanger.ac.uk/cosmic/download` (Coding Mutations VCF; free registration) | Used for the "database-matched" bucket. |
-| **GENCODE** (gene model) | `https://www.gencodegenes.org/human/` (GRCh38 GTF) | For SNV -> gene mapping. |
+| **ClinVar** (annotation) | release of 31 August 2025: `https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/archive_2.0/2025/clinvar_20250831.vcf.gz` | Used for benign / pathogenic / VUS classification. |
+| **COSMIC** (annotation) | `https://cancer.sanger.ac.uk/cosmic/download` (v102, GRCh37: `COSMIC_MUTANTS_all_v102_GRCh37.vcf.gz`; free registration) | Used for the "database-matched" bucket. |
+| **GENCODE** (gene model) | `https://www.gencodegenes.org/human/release_19.html` (release 19, the GRCh37 gene model: `gencode.v19.annotation.gtf.gz`) | For SNV -> gene mapping. |
 
 ---
 

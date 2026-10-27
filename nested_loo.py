@@ -2,6 +2,11 @@
 """
 nested_loo.py -- the honest version of "filter the reference by our biomarkers".
 
+Manuscript: `python nested_loo.py AA,EA` gives the Table 2b nested-selection row (cosine
+0.25, Spearman 0.71); table2_exact.py adds its exact population-preserving p-values.
+Run on all 20 patients (no argument), the result is confounded by the Indian targeted
+panel (see deprecated/README.md) and is not used.
+
 The biomarkers were selected using the cohort's own high/low labels, so scoring
 the same cohort with them leaks. Here we redo selection INSIDE each leave-one-out
 fold (never touching the held-out patient), so the gene choice can't peek at the

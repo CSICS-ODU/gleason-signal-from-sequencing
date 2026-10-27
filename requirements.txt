@@ -1,0 +1,5 @@
+# pip alternative to py3-environment.yml (results produced under Python 3.13, re-verified under 3.14)
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+matplotlib>=3.9

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""viz_gradescore.py -- proposed Fig 8 (Option A): a one-axis 'grade-association score'.
+"""viz_gradescore.py -- manuscript Fig. 8: a one-axis 'grade-association score'.
 
 For every sample we compute, in the cohort-normalized (per-gene-z) space, how much more
 it resembles the high-grade reference group than the low-grade group:
@@ -71,11 +71,11 @@ for nm, m in (("ref high", ref_score[hi]), ("ref low", ref_score[lo]),
 # ---- figure ---------------------------------------------------------------
 plt.rcParams.update({"font.size": 12})
 rng = np.random.default_rng(0)
-fig, ax = plt.subplots(figsize=(7.4, 4.2))
+fig, ax = plt.subplots(figsize=(7.4, 6.0))
 rows = [("Reference\nhigh grade", ref_score[hi], HCOL, 3, False),
         ("Reference\nlow grade", ref_score[lo], LCOL, 2, False),
-        ("Query AA+EA\nhigh grade", q_score[qlab == "high"], HCOL, 1, True),
-        ("Query AA+EA\nlow grade", q_score[qlab == "low"], LCOL, 0, True)]
+        ("Our AA+EA patients\nhigh grade", q_score[qlab == "high"], HCOL, 1, True),
+        ("Our AA+EA patients\nlow grade", q_score[qlab == "low"], LCOL, 0, True)]
 
 ax.axvline(0, color="grey", ls="--", lw=1, zorder=1)
 ax.text(-0.03, 3.78, "more low-grade-like  $\\leftarrow$", ha="right", va="center",

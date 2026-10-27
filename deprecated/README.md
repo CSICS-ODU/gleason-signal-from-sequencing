@@ -1,14 +1,16 @@
 # Deprecated / superseded code
 
 These scripts were used during the project but are **not** part of the current
-analysis. They are kept for provenance and history. None of them are needed to
+analysis. (`nested_loo.py`, listed here in an earlier version, is back in the parent
+folder: run on the AA+EA patients it gives the manuscript's nested-selection row. Its
+earlier full-cohort result, Spearman 0.89, was confounded by the Indian targeted panel
+and is not used.) They are kept for provenance and history. None of them are needed to
 reproduce the manuscript results; the current equivalents live in the parent folder.
 
 Do not build on these without checking against the current scripts first.
 
 | Script | What it did | Why deprecated |
 |--------|-------------|----------------|
-| `nested_loo.py` | Nested leave-one-out severity classifier with per-fold biomarker reselection; produced the early **Spearman 0.89** recovery. | That result was an assay/ancestry confound (the reselected genes tracked the Indian targeted panel, not severity). Replaced by `panel_recovery.py` + `panel_recovery_aaea.py`. **Dead — do not resurrect.** |
 | `make_final_fig.py` | Two-panel self-signature-z vs per-gene-z recovery figure (`fig_recovery_pergene`). | Replaced by the single grade-association-score figure from `viz_gradescore.py`. |
 | `make_recovery_fig.py` | Grouped-bar genome-wide-vs-panel recovery figure (`fig_recovery`). | Same; superseded by `viz_gradescore.py`. |
 | `probe_biomarker.py` | One-off diagnostic: provenance and per-gene carrier ancestry of the candidate panel (showed the panel ≈ the Indian clinical-panel genes). | Diagnostic only; conclusions folded into the manuscript. |
@@ -22,4 +24,5 @@ Do not build on these without checking against the current scripts first.
 | `sweep_recurrence.py` | Recurrence-threshold sweep (gene-level). | Exploratory. |
 | `query_genes.py` | Utility to query the rebuilt gene x patient matrices. | Ad hoc utility. |
 | `distance.py`, `copy_of_distance.py` | Original prototype distance / classification (HIGH/LOW prototype averaging), from `genefilelists/`. | Replaced by `distance_knn.py` (which drops the prototype averaging). |
-| `b.py` | Scratch comparison script. | Throwaway. |
+| `perm_test.py` | Permutation test of an early nested k=3 kNN result. | That result is not in the manuscript, and the script reads a `cohort_samples/` folder that is not in the data bundle. |
+| `build_paper_figures.py` | Earlier result figures (`fig_divergence`, `fig_burden`, `fig_candidates`, `fig_recovery`). | Replaced by `make_paper_figures.py` (published Fig. 2 and Fig. 3a) and `viz_gradescore.py` (Fig. 8). |

@@ -25,9 +25,10 @@ Design choices (consistent with the locked analysis):
     reported as confirmation of known genes, NOT as a within-IN high/low contrast (1 low
     IN patient makes that vacuous). Cross-population work is the AA+EA broad stratum.
 
-Run (scipy lives in the WSL py3 env):
-  wsl -d Ubuntu -- bash -lc "cd /mnt/c/Users/s1banerj/Develop/vcf && \
-      ~/miniconda3/bin/conda run -n py3 python build_paper_results.py"
+Run:  python build_paper_results.py
+Manuscript mapping: tableIVB -> Table 1b and Fig. 2; tableIVE -> Fig. 3; tableIV_candidates
+-> Table 4a, DNA-variant column. (The IV.x labels are the section numbers of an earlier
+draft.)
 """
 
 import argparse

@@ -1,15 +1,18 @@
 # -*- coding: utf-8 -*-
-"""Resolve the methods/code normalization question before editing the paper.
+"""quick_norm_sweep.py -- compare normalization schemes for the panel comparison.
 
 Three normalization schemes for the panel-restricted cross-modality classifier
 (23-gene panel, subsample-balanced nearest-class-mean), each on the full 20-patient
 cohort and on the AA+EA-only stratum:
 
-  A  ref self-signature z , query self-signature z   <- what panel_recovery.py ACTUALLY does
-  B  ref per-gene z        , query self-signature z   <- what the Methods PROSE describes
-  C  ref per-gene z        , query per-gene z (leak)   <- the diagnostic
+  A  ref self-signature z , query self-signature z   <- the manuscript's comparison
+                                                         (panel_recovery*.py)
+  B  ref per-gene z        , query self-signature z   <- mixed alternative, not reported
+  C  ref per-gene z        , query per-gene z         <- cohort-standardized (transductive)
 
-If A reproduces 0.81 (full) and ~chance (AA+EA), the code is the source of record.
+A is the manuscript's fixed-panel comparison (Table 2b rows 1-2); C is its
+cohort-standardized row (Table 2b row 4, Fig. 8). p-values here use 1,000 random
+shuffles; table2_exact.py gives the exact p-values the manuscript reports.
 """
 import types, functools
 import numpy as np, pandas as pd
@@ -74,9 +77,9 @@ def run(qpids, refscheme, qscheme, metric):
 
 
 aaea = [p for p in allp if not str(p).isdigit()]
-schemes = [("A self/self  (code)", "self", "self"),
-           ("B pergene/self(prose)", "gene", "self"),
-           ("C pergene/pergene(diag)", "gene", "gene")]
+schemes = [("A self/self", "self", "self"),
+           ("B pergene/self", "gene", "self"),
+           ("C pergene/pergene", "gene", "gene")]
 for cohort_name, qp in (("FULL 20 (13H/7L)", allp), ("AA+EA 10 (4H/6L)", aaea)):
     print(f"=== {cohort_name} ===")
     print(f"{'scheme':<24}{'cos bal(p)':>16}{'spear bal(p)':>16}")
