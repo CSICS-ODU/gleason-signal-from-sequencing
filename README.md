@@ -158,3 +158,7 @@ parsing stage in `UPSTREAM.md` additionally uses `pysam`.
 ## Citation
 
 Manuscript submitted. Funding: AIM-AHEAD Program, Agreement No. 1OT2OD032581.
+
+## License
+
+The code is released under the MIT License (see `LICENSE`). The license covers the code only; `data_bundle.zip` is not part of this repository and is shared on request.
