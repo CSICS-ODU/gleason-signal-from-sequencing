@@ -20,8 +20,8 @@ downloaded and no preprocessing is needed.
 
 ```bash
 # 1. Get the code
-git clone https://github.com/CSICS-ODU/Prostate-Cancer-Research.git
-cd Prostate-Cancer-Research
+git clone https://github.com/CSICS-ODU/gleason-signal-from-sequencing.git
+cd gleason-signal-from-sequencing
 
 # 2. Add the data: extract data_bundle.zip INTO the repository folder, so it creates
 #    cohort_matched/, GSE244631/, genefilelists/, snv_rebuild/ right here:
@@ -41,7 +41,7 @@ python table2_exact.py
 After step 2 the folder looks like this:
 
 ```
-Prostate-Cancer-Research/
+gleason-signal-from-sequencing/
 ├── distance_knn.py  table2_exact.py  ...   (code, from the repository)
 ├── cohort_matched/          20 per-patient gene-count CSVs   ┐
 ├── GSE244631/               NanoString .RCC reference files  │  from
