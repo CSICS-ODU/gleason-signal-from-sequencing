@@ -13,15 +13,11 @@
 *.RCC
 *.sqlite
 
-# ---- INPUT-DATA SLOTS: keep the folder + PLACEHOLDER.md, ignore the data ----
-cohort_matched/*
-!cohort_matched/PLACEHOLDER.md
-GSE244631/*
-!GSE244631/PLACEHOLDER.md
-genefilelists/*
-!genefilelists/PLACEHOLDER.md
-snv_rebuild/*
-!snv_rebuild/PLACEHOLDER.md
+# ---- input data, created by unzipping data_bundle.zip: never committed ----
+cohort_matched/
+GSE244631/
+genefilelists/
+snv_rebuild/
 
 # ---- other data dirs: fully ignored (never committed) ----
 cohort_samples/

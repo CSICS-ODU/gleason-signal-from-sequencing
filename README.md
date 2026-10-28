@@ -121,8 +121,7 @@ repository. `panel_recovery.py` re-writes the panel file, keeping the previous c
 ## Data, privacy, and provenance
 
 - **Code only in git.** Patient-level data (VCFs, sequencing reads, identifiers) are
-  never committed, and `.gitignore` enforces this. The empty data folders carry a
-  `PLACEHOLDER.md` until the bundle is unzipped over them.
+  never committed, and `.gitignore` enforces this.
 - **Raw-data rebuild (optional).** The bundle is the ready-to-run product of the
   upstream processing. How it is built from raw data (genome build GRCh37; ClinVar,
   COSMIC and GENCODE versions; download locations) is described in **`UPSTREAM.md`**. It
